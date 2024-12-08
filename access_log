@@ -179,3 +179,5 @@
  - "GET /docs HTTP/1.0" 200
  - "GET /api/openapi.json HTTP/1.0" 200
  - "GET /api/faults/correct-data HTTP/1.0" 200
+ - "GET /wp-admin/setup-config.php?step=1 HTTP/1.0" 404
+ - "GET /wordpress/wp-admin/setup-config.php?step=1 HTTP/1.0" 404
