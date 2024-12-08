@@ -16,12 +16,32 @@ router = APIRouter(
     prefix="/faults",
     tags=["Ошибки"],
 )
-@router.post("/validate-dict")
-async def validate_string(value: DictValidation):
+
+@router.get("/correct-data", summary="returns the correct data")
+async def get_correct_data():
+    return {
+    "name": "John",
+    "year_birth": 1999,
+    "fav_animals": ["cat", "dog", "mouse"],
+  }
+
+
+@router.get("/false-data", summary="returns incorrect data")
+async def get_false_data():
+    return {
+    "name": "John",
+    "year": 1999,
+    "fav_animals": ["cat", "dog", "mouse"],
+  }
+
+
+@router.post("/validate-dict",summary="I'm expecting a dictionary here, if I substitute the type with a string there will be a type error" )
+async def validate_dict(value: DictValidation):
     # Проверяем, что переданное значение - строка
     
     
     return {"message": f"Valid dict received: {value}"}
+
 # Эндпоинт для успешного запроса (200)
 @router.get("/success", summary="Guaranteed 200 OK response")
 async def get_success():

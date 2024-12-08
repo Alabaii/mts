@@ -1,0 +1,1178 @@
+[2024-12-08 08:22:19 +0300] [13256] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/alabaii/mts_hack/mts/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/alabaii/mts_hack/mts
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /home/alabaii/mts_hack/mts/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/alabaii/mts_hack/mts/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app.main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f8b95a9d870>
+  on_reload: <function OnReload.on_reload at 0x7f8b95a9d990>
+  when_ready: <function WhenReady.when_ready at 0x7f8b95a9dab0>
+  pre_fork: <function Prefork.pre_fork at 0x7f8b95a9dbd0>
+  post_fork: <function Postfork.post_fork at 0x7f8b95a9dcf0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f8b95a9de10>
+  worker_int: <function WorkerInt.worker_int at 0x7f8b95a9df30>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f8b95a9e050>
+  pre_exec: <function PreExec.pre_exec at 0x7f8b95a9e170>
+  pre_request: <function PreRequest.pre_request at 0x7f8b95a9e290>
+  post_request: <function PostRequest.post_request at 0x7f8b95a9e320>
+  child_exit: <function ChildExit.child_exit at 0x7f8b95a9e440>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f8b95a9e560>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f8b95a9e680>
+  on_exit: <function OnExit.on_exit at 0x7f8b95a9e7a0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f8b95a9e8c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2024-12-08 08:22:19 +0300] [13256] [INFO] Starting gunicorn 23.0.0
+[2024-12-08 08:22:19 +0300] [13256] [DEBUG] Arbiter booted
+[2024-12-08 08:22:19 +0300] [13256] [INFO] Listening at: unix:/home/alabaii/mts_hack/mts/gunicorn.sock (13256)
+[2024-12-08 08:22:19 +0300] [13256] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-12-08 08:22:19 +0300] [13261] [INFO] Booting worker with pid: 13261
+[2024-12-08 08:22:19 +0300] [13262] [INFO] Booting worker with pid: 13262
+[2024-12-08 08:22:20 +0300] [13256] [DEBUG] 2 workers
+[2024-12-08 08:22:21 +0300] [13261] [INFO] Started server process [13261]
+[2024-12-08 08:22:21 +0300] [13261] [INFO] Waiting for application startup.
+[2024-12-08 08:22:21 +0300] [13261] [INFO] Application startup complete.
+[2024-12-08 08:22:21 +0300] [13262] [INFO] Started server process [13262]
+[2024-12-08 08:22:21 +0300] [13262] [INFO] Waiting for application startup.
+[2024-12-08 08:22:21 +0300] [13262] [INFO] Application startup complete.
+[2024-12-08 08:50:33 +0300] [13256] [INFO] Handling signal: term
+[2024-12-08 08:50:33 +0300] [13261] [INFO] Shutting down
+[2024-12-08 08:50:33 +0300] [13262] [INFO] Shutting down
+[2024-12-08 08:50:33 +0300] [13261] [INFO] Waiting for application shutdown.
+[2024-12-08 08:50:33 +0300] [13261] [INFO] Application shutdown complete.
+[2024-12-08 08:50:33 +0300] [13261] [INFO] Finished server process [13261]
+[2024-12-08 08:50:33 +0300] [13256] [ERROR] Worker (pid:13261) was sent SIGTERM!
+[2024-12-08 08:50:33 +0300] [13262] [INFO] Waiting for application shutdown.
+[2024-12-08 08:50:33 +0300] [13262] [INFO] Application shutdown complete.
+[2024-12-08 08:50:33 +0300] [13262] [INFO] Finished server process [13262]
+[2024-12-08 08:50:33 +0300] [13256] [ERROR] Worker (pid:13262) was sent SIGTERM!
+[2024-12-08 08:50:33 +0300] [13256] [INFO] Shutting down: Master
+[2024-12-08 08:50:33 +0300] [23140] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/alabaii/mts_hack/mts/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/alabaii/mts_hack/mts
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /home/alabaii/mts_hack/mts/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/alabaii/mts_hack/mts/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app.main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f29705cd870>
+  on_reload: <function OnReload.on_reload at 0x7f29705cd990>
+  when_ready: <function WhenReady.when_ready at 0x7f29705cdab0>
+  pre_fork: <function Prefork.pre_fork at 0x7f29705cdbd0>
+  post_fork: <function Postfork.post_fork at 0x7f29705cdcf0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f29705cde10>
+  worker_int: <function WorkerInt.worker_int at 0x7f29705cdf30>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f29705ce050>
+  pre_exec: <function PreExec.pre_exec at 0x7f29705ce170>
+  pre_request: <function PreRequest.pre_request at 0x7f29705ce290>
+  post_request: <function PostRequest.post_request at 0x7f29705ce320>
+  child_exit: <function ChildExit.child_exit at 0x7f29705ce440>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f29705ce560>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f29705ce680>
+  on_exit: <function OnExit.on_exit at 0x7f29705ce7a0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f29705ce8c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2024-12-08 08:50:33 +0300] [23140] [INFO] Starting gunicorn 23.0.0
+[2024-12-08 08:50:33 +0300] [23140] [DEBUG] Arbiter booted
+[2024-12-08 08:50:33 +0300] [23140] [INFO] Listening at: unix:/home/alabaii/mts_hack/mts/gunicorn.sock (23140)
+[2024-12-08 08:50:33 +0300] [23140] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-12-08 08:50:33 +0300] [23142] [INFO] Booting worker with pid: 23142
+[2024-12-08 08:50:33 +0300] [23143] [INFO] Booting worker with pid: 23143
+[2024-12-08 08:50:34 +0300] [23140] [DEBUG] 2 workers
+[2024-12-08 08:50:35 +0300] [23142] [INFO] Started server process [23142]
+[2024-12-08 08:50:35 +0300] [23142] [INFO] Waiting for application startup.
+[2024-12-08 08:50:35 +0300] [23143] [INFO] Started server process [23143]
+[2024-12-08 08:50:35 +0300] [23143] [INFO] Waiting for application startup.
+[2024-12-08 08:50:35 +0300] [23143] [INFO] Application startup complete.
+[2024-12-08 08:50:35 +0300] [23142] [INFO] Application startup complete.
+[2024-12-08 08:54:57 +0300] [23140] [INFO] Handling signal: term
+[2024-12-08 08:54:57 +0300] [23142] [INFO] Shutting down
+[2024-12-08 08:54:57 +0300] [23143] [INFO] Shutting down
+[2024-12-08 08:54:57 +0300] [23142] [INFO] Waiting for application shutdown.
+[2024-12-08 08:54:57 +0300] [23142] [INFO] Application shutdown complete.
+[2024-12-08 08:54:57 +0300] [23142] [INFO] Finished server process [23142]
+[2024-12-08 08:54:57 +0300] [23143] [INFO] Waiting for application shutdown.
+[2024-12-08 08:54:57 +0300] [23143] [INFO] Application shutdown complete.
+[2024-12-08 08:54:57 +0300] [23143] [INFO] Finished server process [23143]
+[2024-12-08 08:54:57 +0300] [23140] [ERROR] Worker (pid:23142) was sent SIGTERM!
+[2024-12-08 08:54:57 +0300] [23140] [ERROR] Worker (pid:23143) was sent SIGTERM!
+[2024-12-08 08:54:57 +0300] [23140] [INFO] Shutting down: Master
+[2024-12-08 08:54:57 +0300] [24390] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/alabaii/mts_hack/mts/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/alabaii/mts_hack/mts
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /home/alabaii/mts_hack/mts/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/alabaii/mts_hack/mts/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app.main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f58aeae1870>
+  on_reload: <function OnReload.on_reload at 0x7f58aeae1990>
+  when_ready: <function WhenReady.when_ready at 0x7f58aeae1ab0>
+  pre_fork: <function Prefork.pre_fork at 0x7f58aeae1bd0>
+  post_fork: <function Postfork.post_fork at 0x7f58aeae1cf0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f58aeae1e10>
+  worker_int: <function WorkerInt.worker_int at 0x7f58aeae1f30>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f58aeae2050>
+  pre_exec: <function PreExec.pre_exec at 0x7f58aeae2170>
+  pre_request: <function PreRequest.pre_request at 0x7f58aeae2290>
+  post_request: <function PostRequest.post_request at 0x7f58aeae2320>
+  child_exit: <function ChildExit.child_exit at 0x7f58aeae2440>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f58aeae2560>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f58aeae2680>
+  on_exit: <function OnExit.on_exit at 0x7f58aeae27a0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f58aeae28c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2024-12-08 08:54:57 +0300] [24390] [INFO] Starting gunicorn 23.0.0
+[2024-12-08 08:54:57 +0300] [24390] [DEBUG] Arbiter booted
+[2024-12-08 08:54:57 +0300] [24390] [INFO] Listening at: unix:/home/alabaii/mts_hack/mts/gunicorn.sock (24390)
+[2024-12-08 08:54:57 +0300] [24390] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-12-08 08:54:57 +0300] [24393] [INFO] Booting worker with pid: 24393
+[2024-12-08 08:54:57 +0300] [24394] [INFO] Booting worker with pid: 24394
+[2024-12-08 08:54:57 +0300] [24390] [DEBUG] 2 workers
+[2024-12-08 08:54:59 +0300] [24393] [INFO] Started server process [24393]
+[2024-12-08 08:54:59 +0300] [24393] [INFO] Waiting for application startup.
+[2024-12-08 08:54:59 +0300] [24393] [INFO] Application startup complete.
+[2024-12-08 08:54:59 +0300] [24394] [INFO] Started server process [24394]
+[2024-12-08 08:54:59 +0300] [24394] [INFO] Waiting for application startup.
+[2024-12-08 08:54:59 +0300] [24394] [INFO] Application startup complete.
+[2024-12-08 08:59:40 +0300] [24390] [INFO] Handling signal: term
+[2024-12-08 08:59:40 +0300] [24393] [INFO] Shutting down
+[2024-12-08 08:59:40 +0300] [24394] [INFO] Shutting down
+[2024-12-08 08:59:40 +0300] [24393] [INFO] Waiting for application shutdown.
+[2024-12-08 08:59:40 +0300] [24393] [INFO] Application shutdown complete.
+[2024-12-08 08:59:40 +0300] [24393] [INFO] Finished server process [24393]
+[2024-12-08 08:59:40 +0300] [24390] [ERROR] Worker (pid:24393) was sent SIGTERM!
+[2024-12-08 08:59:40 +0300] [24394] [INFO] Waiting for application shutdown.
+[2024-12-08 08:59:40 +0300] [24394] [INFO] Application shutdown complete.
+[2024-12-08 08:59:40 +0300] [24394] [INFO] Finished server process [24394]
+[2024-12-08 08:59:40 +0300] [24390] [ERROR] Worker (pid:24394) was sent SIGTERM!
+[2024-12-08 08:59:40 +0300] [24390] [INFO] Shutting down: Master
+[2024-12-08 08:59:40 +0300] [26068] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/alabaii/mts_hack/mts/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/alabaii/mts_hack/mts
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /home/alabaii/mts_hack/mts/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/alabaii/mts_hack/mts/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app.main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f7f60e11870>
+  on_reload: <function OnReload.on_reload at 0x7f7f60e11990>
+  when_ready: <function WhenReady.when_ready at 0x7f7f60e11ab0>
+  pre_fork: <function Prefork.pre_fork at 0x7f7f60e11bd0>
+  post_fork: <function Postfork.post_fork at 0x7f7f60e11cf0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f7f60e11e10>
+  worker_int: <function WorkerInt.worker_int at 0x7f7f60e11f30>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f7f60e12050>
+  pre_exec: <function PreExec.pre_exec at 0x7f7f60e12170>
+  pre_request: <function PreRequest.pre_request at 0x7f7f60e12290>
+  post_request: <function PostRequest.post_request at 0x7f7f60e12320>
+  child_exit: <function ChildExit.child_exit at 0x7f7f60e12440>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f7f60e12560>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f7f60e12680>
+  on_exit: <function OnExit.on_exit at 0x7f7f60e127a0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f7f60e128c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2024-12-08 08:59:40 +0300] [26068] [INFO] Starting gunicorn 23.0.0
+[2024-12-08 08:59:40 +0300] [26068] [DEBUG] Arbiter booted
+[2024-12-08 08:59:40 +0300] [26068] [INFO] Listening at: unix:/home/alabaii/mts_hack/mts/gunicorn.sock (26068)
+[2024-12-08 08:59:40 +0300] [26068] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-12-08 08:59:40 +0300] [26070] [INFO] Booting worker with pid: 26070
+[2024-12-08 08:59:40 +0300] [26071] [INFO] Booting worker with pid: 26071
+[2024-12-08 08:59:40 +0300] [26068] [DEBUG] 2 workers
+[2024-12-08 08:59:42 +0300] [26070] [INFO] Started server process [26070]
+[2024-12-08 08:59:42 +0300] [26070] [INFO] Waiting for application startup.
+[2024-12-08 08:59:42 +0300] [26070] [INFO] Application startup complete.
+[2024-12-08 08:59:42 +0300] [26071] [INFO] Started server process [26071]
+[2024-12-08 08:59:42 +0300] [26071] [INFO] Waiting for application startup.
+[2024-12-08 08:59:42 +0300] [26071] [INFO] Application startup complete.
+[2024-12-08 09:03:21 +0300] [26068] [INFO] Handling signal: term
+[2024-12-08 09:03:21 +0300] [26070] [INFO] Shutting down
+[2024-12-08 09:03:22 +0300] [26071] [INFO] Shutting down
+[2024-12-08 09:03:22 +0300] [26070] [INFO] Waiting for application shutdown.
+[2024-12-08 09:03:22 +0300] [26070] [INFO] Application shutdown complete.
+[2024-12-08 09:03:22 +0300] [26070] [INFO] Finished server process [26070]
+[2024-12-08 09:03:22 +0300] [26068] [ERROR] Worker (pid:26070) was sent SIGTERM!
+[2024-12-08 09:03:22 +0300] [26071] [INFO] Waiting for application shutdown.
+[2024-12-08 09:03:22 +0300] [26071] [INFO] Application shutdown complete.
+[2024-12-08 09:03:22 +0300] [26071] [INFO] Finished server process [26071]
+[2024-12-08 09:03:22 +0300] [26068] [ERROR] Worker (pid:26071) was sent SIGTERM!
+[2024-12-08 09:03:22 +0300] [26068] [INFO] Shutting down: Master
+[2024-12-08 09:03:22 +0300] [27259] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/alabaii/mts_hack/mts/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/alabaii/mts_hack/mts
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /home/alabaii/mts_hack/mts/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/alabaii/mts_hack/mts/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app.main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fedae2c5870>
+  on_reload: <function OnReload.on_reload at 0x7fedae2c5990>
+  when_ready: <function WhenReady.when_ready at 0x7fedae2c5ab0>
+  pre_fork: <function Prefork.pre_fork at 0x7fedae2c5bd0>
+  post_fork: <function Postfork.post_fork at 0x7fedae2c5cf0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fedae2c5e10>
+  worker_int: <function WorkerInt.worker_int at 0x7fedae2c5f30>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fedae2c6050>
+  pre_exec: <function PreExec.pre_exec at 0x7fedae2c6170>
+  pre_request: <function PreRequest.pre_request at 0x7fedae2c6290>
+  post_request: <function PostRequest.post_request at 0x7fedae2c6320>
+  child_exit: <function ChildExit.child_exit at 0x7fedae2c6440>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fedae2c6560>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fedae2c6680>
+  on_exit: <function OnExit.on_exit at 0x7fedae2c67a0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7fedae2c68c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2024-12-08 09:03:22 +0300] [27259] [INFO] Starting gunicorn 23.0.0
+[2024-12-08 09:03:22 +0300] [27259] [DEBUG] Arbiter booted
+[2024-12-08 09:03:22 +0300] [27259] [INFO] Listening at: unix:/home/alabaii/mts_hack/mts/gunicorn.sock (27259)
+[2024-12-08 09:03:22 +0300] [27259] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-12-08 09:03:22 +0300] [27261] [INFO] Booting worker with pid: 27261
+[2024-12-08 09:03:22 +0300] [27262] [INFO] Booting worker with pid: 27262
+[2024-12-08 09:03:22 +0300] [27259] [DEBUG] 2 workers
+[2024-12-08 09:03:24 +0300] [27261] [INFO] Started server process [27261]
+[2024-12-08 09:03:24 +0300] [27261] [INFO] Waiting for application startup.
+[2024-12-08 09:03:24 +0300] [27261] [INFO] Application startup complete.
+[2024-12-08 09:03:24 +0300] [27262] [INFO] Started server process [27262]
+[2024-12-08 09:03:24 +0300] [27262] [INFO] Waiting for application startup.
+[2024-12-08 09:03:24 +0300] [27262] [INFO] Application startup complete.
+[2024-12-08 09:06:38 +0300] [27259] [INFO] Handling signal: term
+[2024-12-08 09:06:38 +0300] [27261] [INFO] Shutting down
+[2024-12-08 09:06:38 +0300] [27262] [INFO] Shutting down
+[2024-12-08 09:06:39 +0300] [27261] [INFO] Waiting for application shutdown.
+[2024-12-08 09:06:39 +0300] [27261] [INFO] Application shutdown complete.
+[2024-12-08 09:06:39 +0300] [27261] [INFO] Finished server process [27261]
+[2024-12-08 09:06:39 +0300] [27262] [INFO] Waiting for application shutdown.
+[2024-12-08 09:06:39 +0300] [27262] [INFO] Application shutdown complete.
+[2024-12-08 09:06:39 +0300] [27262] [INFO] Finished server process [27262]
+[2024-12-08 09:06:39 +0300] [27259] [ERROR] Worker (pid:27261) was sent SIGTERM!
+[2024-12-08 09:06:39 +0300] [27259] [ERROR] Worker (pid:27262) was sent SIGTERM!
+[2024-12-08 09:06:39 +0300] [27259] [INFO] Shutting down: Master
+[2024-12-08 09:06:39 +0300] [28165] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/alabaii/mts_hack/mts/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/alabaii/mts_hack/mts
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /home/alabaii/mts_hack/mts/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/alabaii/mts_hack/mts/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app.main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fc985931870>
+  on_reload: <function OnReload.on_reload at 0x7fc985931990>
+  when_ready: <function WhenReady.when_ready at 0x7fc985931ab0>
+  pre_fork: <function Prefork.pre_fork at 0x7fc985931bd0>
+  post_fork: <function Postfork.post_fork at 0x7fc985931cf0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fc985931e10>
+  worker_int: <function WorkerInt.worker_int at 0x7fc985931f30>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fc985932050>
+  pre_exec: <function PreExec.pre_exec at 0x7fc985932170>
+  pre_request: <function PreRequest.pre_request at 0x7fc985932290>
+  post_request: <function PostRequest.post_request at 0x7fc985932320>
+  child_exit: <function ChildExit.child_exit at 0x7fc985932440>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fc985932560>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fc985932680>
+  on_exit: <function OnExit.on_exit at 0x7fc9859327a0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7fc9859328c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2024-12-08 09:06:39 +0300] [28165] [INFO] Starting gunicorn 23.0.0
+[2024-12-08 09:06:39 +0300] [28165] [DEBUG] Arbiter booted
+[2024-12-08 09:06:39 +0300] [28165] [INFO] Listening at: unix:/home/alabaii/mts_hack/mts/gunicorn.sock (28165)
+[2024-12-08 09:06:39 +0300] [28165] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-12-08 09:06:39 +0300] [28174] [INFO] Booting worker with pid: 28174
+[2024-12-08 09:06:39 +0300] [28175] [INFO] Booting worker with pid: 28175
+[2024-12-08 09:06:39 +0300] [28165] [DEBUG] 2 workers
+[2024-12-08 09:06:41 +0300] [28174] [INFO] Started server process [28174]
+[2024-12-08 09:06:41 +0300] [28174] [INFO] Waiting for application startup.
+[2024-12-08 09:06:41 +0300] [28174] [INFO] Application startup complete.
+[2024-12-08 09:06:41 +0300] [28175] [INFO] Started server process [28175]
+[2024-12-08 09:06:41 +0300] [28175] [INFO] Waiting for application startup.
+[2024-12-08 09:06:41 +0300] [28175] [INFO] Application startup complete.
+[2024-12-08 09:11:01 +0300] [28165] [INFO] Handling signal: term
+[2024-12-08 09:11:01 +0300] [28174] [INFO] Shutting down
+[2024-12-08 09:11:01 +0300] [28175] [INFO] Shutting down
+[2024-12-08 09:11:01 +0300] [28174] [INFO] Waiting for application shutdown.
+[2024-12-08 09:11:01 +0300] [28174] [INFO] Application shutdown complete.
+[2024-12-08 09:11:01 +0300] [28174] [INFO] Finished server process [28174]
+[2024-12-08 09:11:01 +0300] [28165] [ERROR] Worker (pid:28174) was sent SIGTERM!
+[2024-12-08 09:11:01 +0300] [28175] [INFO] Waiting for application shutdown.
+[2024-12-08 09:11:01 +0300] [28175] [INFO] Application shutdown complete.
+[2024-12-08 09:11:01 +0300] [28175] [INFO] Finished server process [28175]
+[2024-12-08 09:11:01 +0300] [28165] [ERROR] Worker (pid:28175) was sent SIGTERM!
+[2024-12-08 09:11:01 +0300] [28165] [INFO] Shutting down: Master
+[2024-12-08 09:11:01 +0300] [29773] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/alabaii/mts_hack/mts/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/alabaii/mts_hack/mts
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /home/alabaii/mts_hack/mts/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/alabaii/mts_hack/mts/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app.main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f51231bd870>
+  on_reload: <function OnReload.on_reload at 0x7f51231bd990>
+  when_ready: <function WhenReady.when_ready at 0x7f51231bdab0>
+  pre_fork: <function Prefork.pre_fork at 0x7f51231bdbd0>
+  post_fork: <function Postfork.post_fork at 0x7f51231bdcf0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f51231bde10>
+  worker_int: <function WorkerInt.worker_int at 0x7f51231bdf30>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f51231be050>
+  pre_exec: <function PreExec.pre_exec at 0x7f51231be170>
+  pre_request: <function PreRequest.pre_request at 0x7f51231be290>
+  post_request: <function PostRequest.post_request at 0x7f51231be320>
+  child_exit: <function ChildExit.child_exit at 0x7f51231be440>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f51231be560>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f51231be680>
+  on_exit: <function OnExit.on_exit at 0x7f51231be7a0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f51231be8c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2024-12-08 09:11:01 +0300] [29773] [INFO] Starting gunicorn 23.0.0
+[2024-12-08 09:11:01 +0300] [29773] [DEBUG] Arbiter booted
+[2024-12-08 09:11:01 +0300] [29773] [INFO] Listening at: unix:/home/alabaii/mts_hack/mts/gunicorn.sock (29773)
+[2024-12-08 09:11:01 +0300] [29773] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-12-08 09:11:01 +0300] [29775] [INFO] Booting worker with pid: 29775
+[2024-12-08 09:11:01 +0300] [29779] [INFO] Booting worker with pid: 29779
+[2024-12-08 09:11:02 +0300] [29773] [DEBUG] 2 workers
+[2024-12-08 09:11:03 +0300] [29775] [INFO] Started server process [29775]
+[2024-12-08 09:11:03 +0300] [29775] [INFO] Waiting for application startup.
+[2024-12-08 09:11:03 +0300] [29775] [INFO] Application startup complete.
+[2024-12-08 09:11:03 +0300] [29779] [INFO] Started server process [29779]
+[2024-12-08 09:11:03 +0300] [29779] [INFO] Waiting for application startup.
+[2024-12-08 09:11:03 +0300] [29779] [INFO] Application startup complete.
+[2024-12-08 09:22:19 +0300] [29773] [INFO] Handling signal: term
+[2024-12-08 09:22:19 +0300] [29779] [INFO] Shutting down
+[2024-12-08 09:22:19 +0300] [29775] [INFO] Shutting down
+[2024-12-08 09:22:19 +0300] [29779] [INFO] Waiting for application shutdown.
+[2024-12-08 09:22:19 +0300] [29779] [INFO] Application shutdown complete.
+[2024-12-08 09:22:19 +0300] [29779] [INFO] Finished server process [29779]
+[2024-12-08 09:22:19 +0300] [29773] [ERROR] Worker (pid:29779) was sent SIGTERM!
+[2024-12-08 09:22:19 +0300] [29775] [INFO] Waiting for application shutdown.
+[2024-12-08 09:22:19 +0300] [29775] [INFO] Application shutdown complete.
+[2024-12-08 09:22:19 +0300] [29775] [INFO] Finished server process [29775]
+[2024-12-08 09:22:19 +0300] [29773] [ERROR] Worker (pid:29775) was sent SIGTERM!
+[2024-12-08 09:22:19 +0300] [29773] [INFO] Shutting down: Master
+[2024-12-08 09:22:19 +0300] [33883] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/alabaii/mts_hack/mts/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/alabaii/mts_hack/mts
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /home/alabaii/mts_hack/mts/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/alabaii/mts_hack/mts/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app.main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fbc9ecd1870>
+  on_reload: <function OnReload.on_reload at 0x7fbc9ecd1990>
+  when_ready: <function WhenReady.when_ready at 0x7fbc9ecd1ab0>
+  pre_fork: <function Prefork.pre_fork at 0x7fbc9ecd1bd0>
+  post_fork: <function Postfork.post_fork at 0x7fbc9ecd1cf0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fbc9ecd1e10>
+  worker_int: <function WorkerInt.worker_int at 0x7fbc9ecd1f30>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fbc9ecd2050>
+  pre_exec: <function PreExec.pre_exec at 0x7fbc9ecd2170>
+  pre_request: <function PreRequest.pre_request at 0x7fbc9ecd2290>
+  post_request: <function PostRequest.post_request at 0x7fbc9ecd2320>
+  child_exit: <function ChildExit.child_exit at 0x7fbc9ecd2440>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fbc9ecd2560>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fbc9ecd2680>
+  on_exit: <function OnExit.on_exit at 0x7fbc9ecd27a0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7fbc9ecd28c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2024-12-08 09:22:19 +0300] [33883] [INFO] Starting gunicorn 23.0.0
+[2024-12-08 09:22:19 +0300] [33883] [DEBUG] Arbiter booted
+[2024-12-08 09:22:19 +0300] [33883] [INFO] Listening at: unix:/home/alabaii/mts_hack/mts/gunicorn.sock (33883)
+[2024-12-08 09:22:19 +0300] [33883] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-12-08 09:22:19 +0300] [33890] [INFO] Booting worker with pid: 33890
+[2024-12-08 09:22:19 +0300] [33894] [INFO] Booting worker with pid: 33894
+[2024-12-08 09:22:19 +0300] [33883] [DEBUG] 2 workers
+[2024-12-08 09:22:21 +0300] [33890] [INFO] Started server process [33890]
+[2024-12-08 09:22:21 +0300] [33890] [INFO] Waiting for application startup.
+[2024-12-08 09:22:21 +0300] [33894] [INFO] Started server process [33894]
+[2024-12-08 09:22:21 +0300] [33894] [INFO] Waiting for application startup.
+[2024-12-08 09:22:21 +0300] [33894] [INFO] Application startup complete.
+[2024-12-08 09:22:21 +0300] [33890] [INFO] Application startup complete.
+[2024-12-08 21:12:54 +0300] [33883] [INFO] Handling signal: term
+[2024-12-08 21:12:54 +0300] [33894] [INFO] Shutting down
+[2024-12-08 21:12:54 +0300] [33890] [INFO] Shutting down
+[2024-12-08 21:12:54 +0300] [33894] [INFO] Waiting for application shutdown.
+[2024-12-08 21:12:54 +0300] [33894] [INFO] Application shutdown complete.
+[2024-12-08 21:12:54 +0300] [33894] [INFO] Finished server process [33894]
+[2024-12-08 21:12:54 +0300] [33890] [INFO] Waiting for application shutdown.
+[2024-12-08 21:12:54 +0300] [33890] [INFO] Application shutdown complete.
+[2024-12-08 21:12:54 +0300] [33890] [INFO] Finished server process [33890]
+[2024-12-08 21:12:54 +0300] [33883] [ERROR] Worker (pid:33894) was sent SIGTERM!
+[2024-12-08 21:12:54 +0300] [33883] [ERROR] Worker (pid:33890) was sent SIGTERM!
+[2024-12-08 21:12:54 +0300] [33883] [INFO] Shutting down: Master
+[2024-12-08 21:12:54 +0300] [166010] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/alabaii/mts_hack/mts/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/alabaii/mts_hack/mts
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /home/alabaii/mts_hack/mts/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/alabaii/mts_hack/mts/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app.main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f3eb181d870>
+  on_reload: <function OnReload.on_reload at 0x7f3eb181d990>
+  when_ready: <function WhenReady.when_ready at 0x7f3eb181dab0>
+  pre_fork: <function Prefork.pre_fork at 0x7f3eb181dbd0>
+  post_fork: <function Postfork.post_fork at 0x7f3eb181dcf0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f3eb181de10>
+  worker_int: <function WorkerInt.worker_int at 0x7f3eb181df30>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f3eb181e050>
+  pre_exec: <function PreExec.pre_exec at 0x7f3eb181e170>
+  pre_request: <function PreRequest.pre_request at 0x7f3eb181e290>
+  post_request: <function PostRequest.post_request at 0x7f3eb181e320>
+  child_exit: <function ChildExit.child_exit at 0x7f3eb181e440>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f3eb181e560>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f3eb181e680>
+  on_exit: <function OnExit.on_exit at 0x7f3eb181e7a0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f3eb181e8c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2024-12-08 21:12:54 +0300] [166010] [INFO] Starting gunicorn 23.0.0
+[2024-12-08 21:12:54 +0300] [166010] [DEBUG] Arbiter booted
+[2024-12-08 21:12:54 +0300] [166010] [INFO] Listening at: unix:/home/alabaii/mts_hack/mts/gunicorn.sock (166010)
+[2024-12-08 21:12:54 +0300] [166010] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-12-08 21:12:54 +0300] [166013] [INFO] Booting worker with pid: 166013
+[2024-12-08 21:12:54 +0300] [166014] [INFO] Booting worker with pid: 166014
+[2024-12-08 21:12:54 +0300] [166010] [DEBUG] 2 workers
+[2024-12-08 21:12:56 +0300] [166013] [INFO] Started server process [166013]
+[2024-12-08 21:12:56 +0300] [166013] [INFO] Waiting for application startup.
+[2024-12-08 21:12:56 +0300] [166013] [INFO] Application startup complete.
+[2024-12-08 21:12:56 +0300] [166014] [INFO] Started server process [166014]
+[2024-12-08 21:12:56 +0300] [166014] [INFO] Waiting for application startup.
+[2024-12-08 21:12:56 +0300] [166014] [INFO] Application startup complete.
+[2024-12-08 21:22:27 +0300] [166010] [INFO] Handling signal: term
+[2024-12-08 21:22:27 +0300] [166013] [INFO] Shutting down
+[2024-12-08 21:22:27 +0300] [166014] [INFO] Shutting down
+[2024-12-08 21:22:27 +0300] [166013] [INFO] Waiting for application shutdown.
+[2024-12-08 21:22:27 +0300] [166013] [INFO] Application shutdown complete.
+[2024-12-08 21:22:27 +0300] [166013] [INFO] Finished server process [166013]
+[2024-12-08 21:22:27 +0300] [166014] [INFO] Waiting for application shutdown.
+[2024-12-08 21:22:27 +0300] [166014] [INFO] Application shutdown complete.
+[2024-12-08 21:22:27 +0300] [166014] [INFO] Finished server process [166014]
+[2024-12-08 21:22:27 +0300] [166010] [ERROR] Worker (pid:166013) was sent SIGTERM!
+[2024-12-08 21:22:27 +0300] [166010] [ERROR] Worker (pid:166014) was sent SIGTERM!
+[2024-12-08 21:22:27 +0300] [166010] [INFO] Shutting down: Master
+[2024-12-08 21:22:27 +0300] [167848] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/alabaii/mts_hack/mts/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/alabaii/mts_hack/mts
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: /home/alabaii/mts_hack/mts/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/alabaii/mts_hack/mts/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app.main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f92e41a9870>
+  on_reload: <function OnReload.on_reload at 0x7f92e41a9990>
+  when_ready: <function WhenReady.when_ready at 0x7f92e41a9ab0>
+  pre_fork: <function Prefork.pre_fork at 0x7f92e41a9bd0>
+  post_fork: <function Postfork.post_fork at 0x7f92e41a9cf0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f92e41a9e10>
+  worker_int: <function WorkerInt.worker_int at 0x7f92e41a9f30>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f92e41aa050>
+  pre_exec: <function PreExec.pre_exec at 0x7f92e41aa170>
+  pre_request: <function PreRequest.pre_request at 0x7f92e41aa290>
+  post_request: <function PostRequest.post_request at 0x7f92e41aa320>
+  child_exit: <function ChildExit.child_exit at 0x7f92e41aa440>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f92e41aa560>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f92e41aa680>
+  on_exit: <function OnExit.on_exit at 0x7f92e41aa7a0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f92e41aa8c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+[2024-12-08 21:22:27 +0300] [167848] [INFO] Starting gunicorn 23.0.0
+[2024-12-08 21:22:27 +0300] [167848] [DEBUG] Arbiter booted
+[2024-12-08 21:22:27 +0300] [167848] [INFO] Listening at: unix:/home/alabaii/mts_hack/mts/gunicorn.sock (167848)
+[2024-12-08 21:22:27 +0300] [167848] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-12-08 21:22:27 +0300] [167854] [INFO] Booting worker with pid: 167854
+[2024-12-08 21:22:27 +0300] [167855] [INFO] Booting worker with pid: 167855
+[2024-12-08 21:22:27 +0300] [167848] [DEBUG] 2 workers
+[2024-12-08 21:22:30 +0300] [167854] [INFO] Started server process [167854]
+[2024-12-08 21:22:30 +0300] [167854] [INFO] Waiting for application startup.
+[2024-12-08 21:22:30 +0300] [167854] [INFO] Application startup complete.
+[2024-12-08 21:22:30 +0300] [167855] [INFO] Started server process [167855]
+[2024-12-08 21:22:30 +0300] [167855] [INFO] Waiting for application startup.
+[2024-12-08 21:22:30 +0300] [167855] [INFO] Application startup complete.
