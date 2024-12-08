@@ -59,7 +59,17 @@ class BaseDAO:
 
     @classmethod
     async def delete(cls, **filter_by):
-        async with async_session_maker() as session:
-            query = delete(cls.model).filter_by(**filter_by)
-            await session.execute(query)
+        async with async_session_maker() as session:  # Используем ваш сессионный менеджер
+            # Находим записи, которые будут удалены
+            query = select(cls.model).filter_by(**filter_by)
+            result = await session.execute(query)
+            rows = result.scalars().all()
+
+            if not rows:
+                return None  # Возвращаем None, если записи не найдены
+
+            # Если записи найдены, выполняем их удаление
+            delete_query = delete(cls.model).filter_by(**filter_by)
+            await session.execute(delete_query)
             await session.commit()
+            return len(rows)

@@ -1,13 +1,27 @@
+import logging
+from typing import Optional
 from fastapi import APIRouter, HTTPException, Query,status
+from pydantic import UUID4
+from sqlalchemy import UUID
 
 
 from app.faults.dao import FaultsDAO
 from app.faults.schemas import DictValidation, FaultCreate, SFaults
 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+
 router = APIRouter(
     prefix="/faults",
     tags=["Ошибки"],
 )
+@router.post("/validate-dict")
+async def validate_string(value: DictValidation):
+    # Проверяем, что переданное значение - строка
+    
+    
+    return {"message": f"Valid dict received: {value}"}
 # Эндпоинт для успешного запроса (200)
 @router.get("/success", summary="Guaranteed 200 OK response")
 async def get_success():
@@ -22,12 +36,7 @@ async def get_bad_request():
 async def get_internal_error():
     raise HTTPException(status_code=500, detail="Internal server error occurred.")
 
-@router.post("/validate-dict")
-async def validate_string(value: DictValidation):
-    # Проверяем, что переданное значение - строка
-    
-    
-    return {"message": f"Valid dict received: {value}"}
+
 
 @router.get("/all", summary="Get all faults", response_model=list[SFaults])
 async def get_faults(
@@ -45,7 +54,7 @@ async def get_faults(
     result = await FaultsDAO.find_all(offset=offset, limit=limit, **filters)
     return result
 
-@router.get("/{id}", summary="Get fault by id") 
+@router.get("/find_by_id/{id}", summary="Get fault by id") 
 async def get_faults_by_id(id)-> SFaults:
     result = await FaultsDAO.find_by_id(id)
     if not result:
@@ -77,4 +86,45 @@ async def add_fault(fault: FaultCreate):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Unexpected error occurred: {str(e)}"
         )
+    
+@router.delete("/faults/")
+async def delete_fault(id: Optional[UUID4] = Query(None), 
+                       ip: Optional[str] = Query(None), 
+                       code_fault: Optional[int] = Query(None),
+                       comment: Optional[str] = Query(None)):
+    """
+    Удаляет запись из таблицы faults по фильтрам, переданным через query параметры.
+    Параметры:
+        id: UUID — идентификатор записи (необязателен).
+        ip: str — IP адрес (необязателен).
+        code_fault: int — код ошибки (необязателен).
+        comment: str — комментарий (необязателен).
+    """
+    filter_params = {}
+    
+    if id:
+        filter_params['id'] = id
+    if ip:
+        filter_params['ip'] = ip
+    if code_fault:
+        filter_params['code_fault'] = code_fault
+    if comment:
+        filter_params['comment'] = comment
 
+    # Логируем передаваемые фильтры
+    logger.info(f"Attempting to delete with filters: {filter_params}")
+    
+    try:
+        # Вызов DAO-метода для удаления
+        result = await FaultsDAO.delete(**filter_params)
+
+        if result is None:  # Если записи не найдены
+            logger.error(f"No records found for filters: {filter_params}")
+            raise HTTPException(status_code=404, detail="Record not found")
+        
+        logger.info(f"Deleted {result} record(s) with filters: {filter_params}")
+        return {"status": "success", "message": f"{result} record(s) deleted successfully"}
+
+    except Exception as e:
+        logger.error(f"Error occurred: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
